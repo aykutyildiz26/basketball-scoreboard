@@ -4,7 +4,7 @@ font-family: 'Pixelify Sans', cursive;
 */
 
 body{
-    background: violet;
+    background: purple;
 }
 
 button:active{
@@ -39,7 +39,6 @@ body,
 }
 
 .basketball-scoreboard-section{
-    background: purple;
     margin: 100px 32px;
 }
 
@@ -51,6 +50,9 @@ body,
 .left-container,
 .right-container{
     flex-direction: column;
+    border: 4px solid whitesmoke;
+    border-radius: 24px;
+    padding: 12px;
     gap: 32px;
 }
 
