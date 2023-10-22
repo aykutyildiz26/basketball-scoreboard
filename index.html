@@ -1,57 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta&family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&family=Pixelify+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <title>Basketball Scoreboard</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <section class="basketball-scoreboard-section">
-        <div class="section-wrapper">
-            <div class="left-container">
-                <h2 id="home-team-name">Home</h2>
-                <h3 id="home-team-score">999</h3>
-                <div class="team-inputs-container">
-                    <div class="user-inputs-container">
-                        <div class="number-buttons-container">
-                            <button id="home-team-add-one" class="number-button">1</button>
-                            <button id="home-team-add-two" class="number-button">2</button>
-                            <button id="home-team-add-three" class="number-button">3</button>
-                        </div>
-                        <input class="user-input" id="home-team-user-input" type="text" placeholder="Point">
-                    </div>
-                    <div class="user-entries">
-                        <button id="home-team-increase" class="entry-button">Increase</button>
-                        <button id="home-team-decrease" class="entry-button">Decrease</button>
-                    </div>
-                </div>
+      <div class="section-wrapper">
+        <div class="left-container">
+          <h2 id="home-team-name">Home</h2>
+          <h3 id="home-team-score">999</h3>
+          <div class="team-inputs-container">
+            <div class="user-inputs-container">
+              <!-- prettier-ignore -->
+              <div class="number-buttons-container">
+              <button data-score="1" id="home-team-btn" class="number-button">1</button>
+              <button data-score="2" id="home-team-btn" class="number-button">2</button>
+              <button data-score="3" id="home-team-btn" class="number-button">3</button>
             </div>
-            <div class="right-container">
-                <h2 id="guest-team-name">Guest</h2>
-                <h3 id="guest-team-score">999</h3>
-                <div class="team-inputs-container">
-                    <div class="user-inputs-container">
-                        <div class="number-buttons-container">
-                            <button id="guest-team-add-one" class="number-button">1</button>
-                            <button id="guest-team-add-two" class="number-button">2</button>
-                            <button id="guest-team-add-three" class="number-button">3</button>
-                        </div>
-                        <input class="user-input" id="guest-team-user-input" type="text" placeholder="Point">
-                    </div>
-                    <div class="user-entries">
-                        <button id="guest-team-increase" class="entry-button">Increase</button>
-                        <button id="guest-team-decrease" class="entry-button">Decrease</button>
-                    </div>
-                </div>
+              <input
+                class="user-input"
+                id="home-team-user-input"
+                type="text"
+                placeholder="Point"
+              />
             </div>
+
+            <!-- prettier-ignore -->
+            <div class="user-entries">
+            <button data-inc-score="true" data-home="true" class="entry-button"> Increase </button>
+            <button data-inc-score="false" data-home="true" class="entry-button"> Decrease </button>
+          </div>
+          </div>
         </div>
+
+        <div class="right-container">
+          <h2 id="guest-team-name">Guest</h2>
+          <h3 id="guest-team-score">999</h3>
+          <div class="team-inputs-container">
+            <div class="user-inputs-container">
+              <!-- prettier-ignore -->
+              <div class="number-buttons-container">
+              <button data-score="1" id="guest-team-btn" class="number-button">1</button>
+              <button data-score="2" id="guest-team-btn" class="number-button">2</button>
+              <button data-score="3" id="guest-team-btn" class="number-button">3</button>
+            </div>
+              <input
+                class="user-input"
+                id="guest-team-user-input"
+                type="text"
+                placeholder="Point"
+              />
+            </div>
+
+            <!-- prettier-ignore -->
+            <div class="user-entries">
+            <button data-inc-score="true" data-home="false" class="entry-button"> Increase </button>
+            <button data-inc-score="false" data-home="false" class="entry-button"> Decrease </button>
+          </div>
+          </div>
+        </div>
+      </div>
     </section>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

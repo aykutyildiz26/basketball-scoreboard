@@ -1,186 +1,194 @@
-body{
-    background: purple;
+body {
+  background: purple;
 }
 
-button:active{
-    transform: translateY(3px);
+button:active {
+  transform: translateY(3px);
 }
 
-button:hover{
-    cursor: pointer;
-    box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.7)
+button:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.7);
 }
 
 button,
-input{
-    border-radius: 12px;
+input {
+  border-radius: 12px;
 }
 
 body,
 #guest-team-name,
 #home-team-name,
 #home-team-score,
-#guest-team-score{
-    margin: 0;
-    padding: 0;
+#guest-team-score {
+  margin: 0;
+  padding: 0;
 }
 
 .section-wrapper,
 .left-container,
 .right-container,
 .number-buttons-container,
-.team-inputs-container{
-    display: flex;
+.team-inputs-container {
+  display: flex;
 }
 
-.basketball-scoreboard-section{
-    margin: 100px 32px;
+.basketball-scoreboard-section {
+  margin: 100px 32px;
 }
 
-.section-wrapper{
-    justify-content: space-evenly;
+.section-wrapper {
+  justify-content: space-evenly;
 }
-
 
 .left-container,
-.right-container{
-    flex-direction: column;
-    border: 4px solid whitesmoke;
-    border-radius: 24px;
-    padding: 12px;
-    gap: 32px;
+.right-container {
+  flex-direction: column;
+  border: 12px solid whitesmoke;
+  border-radius: 24px;
+  padding: 12px;
+  gap: 32px;
 }
 
-
-
 #guest-team-name,
-#home-team-name{
-    margin: 0;
-    font-size: 130px;
-    line-height: 120px;
+#home-team-name {
+  margin: 0;
+  font-size: 130px;
+  line-height: 120px;
 }
 
 #home-team-score,
-#guest-team-score{
-    font-family: 'Pixelify Sans', cursive;
-    margin: 0;
-    background: black;
-    color: tomato;
-    text-align: end;
-    width: 350px;
-    font-size: 200px;
-    letter-spacing: 8px;
-    overflow: auto;
+#guest-team-score {
+  font-family: "Pixelify Sans", cursive;
+  margin: 0;
+  background: black;
+  color: tomato;
+  text-align: end;
+  width: 350px;
+  font-size: 200px;
+  letter-spacing: 8px;
+  overflow: auto;
 }
 
-
 .team-inputs-container,
-.number-buttons-container{
-    gap: 12px;
+.number-buttons-container {
+  gap: 12px;
 }
 
 .user-entries,
-.user-inputs-container{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.user-inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .user-input,
-.user-input::placeholder{
-    text-align: center;
+.user-input::placeholder {
+  text-align: center;
 }
 
 .number-button,
 .entry-button,
-.user-input{
-    font-size: 20px;
-    font-weight: 600;
+.user-input {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.number-button{
-    width: 64px;
-    height: 32px;
+.number-button {
+  width: 64px;
+  height: 32px;
 }
-.entry-button{
-    width: 120px;
-    height: 32px;
+.entry-button {
+  width: 120px;
+  height: 32px;
 }
 
-.user-input{
-    width: 208px;
+.user-input {
+  width: 208px;
+  height: 26px;
+
+  background: wheat;
+}
+
+.entry-button:nth-child(1) {
+  background: limegreen;
+}
+
+.entry-button:nth-child(2) {
+  background: crimson;
+}
+
+.number-buttons-container :nth-child(1) {
+  background: orange;
+}
+.number-buttons-container :nth-child(2) {
+  background: yellow;
+}
+.number-buttons-container :nth-child(3) {
+  background: lime;
+}
+
+.greatScore {
+  border-color: lime;
+}
+
+.badScore {
+  border-color: red;
+}
+
+.neutralScore {
+  border-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .basketball-scoreboard-section {
+    margin: 12px 0;
+  }
+  .section-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .right-container {
+    flex-direction: column-reverse;
+  }
+
+  #guest-team-name,
+  #home-team-name {
+    margin: auto;
+    font-size: 96px;
+    line-height: 72px;
+  }
+
+  #home-team-score,
+  #guest-team-score {
+    margin: auto;
+    width: 305px;
+    font-size: 170px;
+  }
+
+  .number-button,
+  .entry-button,
+  .user-input {
+    font-size: 16px;
+  }
+
+  .team-inputs-container {
+    justify-content: space-between;
+  }
+  .number-button {
+    width: 58px;
+    height: 34px;
+  }
+  .entry-button {
+    width: 90px;
+  }
+
+  .user-input {
+    width: 190px;
     height: 26px;
 
     background: wheat;
-}
-
-.entry-button:nth-child(1){
-    background: limegreen;
-}
-
-.entry-button:nth-child(2){
-    background: crimson;
-}
-
-.number-buttons-container :nth-child(1){
-    background: orange;
-}
-.number-buttons-container :nth-child(2){
-    background: yellow;
-}
-.number-buttons-container :nth-child(3){
-    background: lime;
-}
-
-@media screen and (max-width: 768px){
-    .basketball-scoreboard-section{
-        margin: 12px 0;
-    }
-    .section-wrapper{
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
-    }
-
-    .right-container{
-        flex-direction: column-reverse;
-    }
-
-    #guest-team-name,
-    #home-team-name{
-        margin:  auto;
-        font-size: 96px;
-        line-height: 72px;
-    }
-
-    #home-team-score,
-    #guest-team-score{
-        margin: auto;
-        width: 305px;
-        font-size: 170px;     
-    }
-
-    .number-button,
-    .entry-button,
-    .user-input{
-        font-size: 16px;
-    }
-
-    .team-inputs-container{
-        justify-content: space-between;
-    }
-    .number-button{
-        width: 58px;
-        height: 34px;
-    }
-    .entry-button{
-        width: 90px;
-    }
-    
-    .user-input{
-        width: 190px;
-        height: 26px;
-    
-        background: wheat;
-    }
+  }
 }
